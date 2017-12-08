@@ -1,5 +1,5 @@
 #------------------------
-# loadtript_data.py
+# load_trip_data.py
 #------------------------
 
 import pandas as pd
@@ -8,11 +8,11 @@ import h5py
 import json
 
 # Load trip_final data from json:
-json_filepath='E:/Montreal open data/monTrajet/data/trip_final.json'
+json_filepath='/trip_final.json' # Add the path to the trip_final json here.
 with open(json_filepath) as json_data:
-    trip_final = json.load(json_data) # Would instead use loads for loading	
+    trip_final = json.load(json_data) 	
 # Load the burrough shapefiles:
-json_filepath='E:/Montreal open data/Burrough shape coordinates/shapefileArrondissements.json'
+json_filepath='/LIMADMIN.json' # Add the path to the LIMADMIN.json file here.
 with open(json_filepath) as json_data_aronds:
     burrShapes = json.load(json_data_aronds) 
 
